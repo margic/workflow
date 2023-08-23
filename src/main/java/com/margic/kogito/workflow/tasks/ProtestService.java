@@ -4,10 +4,16 @@ import java.util.UUID;
 
 import com.margic.kogito.workflow.model.Protest;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class ProtestService {
-  public void generateTrackingId(Protest protest){
+  public Protest newProtest(){
     UUID uuid = UUID.randomUUID();
-    protest.setTrackingId(uuid.toString());
+    Protest protest = Protest.builder().trackingId(uuid.toString()).build();
+    log.info("new protest created {}", protest);
+
+    return protest;
   }
   
 }
