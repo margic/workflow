@@ -1,4 +1,4 @@
-package com.margic.kogito.workflow.tasks;
+package com.margic.kogito.workflow.kafka;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -10,10 +10,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
-public class KafkaProducer {
+public class ProtestProducer {
   @Autowired KafkaTemplate<String, Protest> kafkaTemplate;
 
-  public void sendKafkaMessage(Protest protest){
+  public void sendProtest(Protest protest){
     log.info("sending protest to protests topic: {}", protest);
     kafkaTemplate.send("Protests", protest.getTrackingId(), protest);
   }

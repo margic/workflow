@@ -16,7 +16,7 @@
 	<description>workflow testing app</description>
 	<properties>
 		<java.version>17</java.version>
-		<kogito.version>1.43.0.Final</kogito.version>
+		<kogito.version>1.44.1.Final</kogito.version>
 	</properties>
 
 	<dependencyManagement>
