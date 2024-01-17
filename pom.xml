@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.14</version>
+		<version>3.2.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.margic.kogito</groupId>
@@ -15,7 +15,7 @@
 	<name>workflow</name>
 	<description>workflow testing app</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<kogito.version>1.44.1.Final</kogito.version>
 	</properties>
 
@@ -45,14 +45,12 @@
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
 
+
 		<dependency>
 			<groupId>org.kie.kogito</groupId>
 			<artifactId>kogito-processes-spring-boot-starter</artifactId>
 		</dependency>
-		<!-- <dependency>
-			<groupId>org.kie.kogito</groupId>
-			<artifactId>kogito-addons-springboot-messaging</artifactId>
-		</dependency> -->
+		
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -67,6 +65,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
